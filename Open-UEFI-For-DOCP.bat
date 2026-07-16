@@ -1,20 +1,20 @@
 @echo off
-:: Reboot this PC straight into ASUS UEFI so you can enable D.O.C.P (XMP).
-:: Save work first. Delay is 30 seconds (cancel with: shutdown /a)
+:: Reboot into UEFI for D.O.C.P. - 90 second delay (cancel: shutdown /a)
 cd /d "%~dp0"
 echo.
-echo ========================================
-echo  benchPC - reboot into BIOS for D.O.C.P
-echo ========================================
+echo ============================================================
+echo  benchPC: Reboot into BIOS to enable RAM D.O.C.P. (3200)
+echo ============================================================
 echo.
-echo After reboot:
-echo   1. Press F7 for Advanced Mode if needed
-echo   2. Ai Tweaker -^> Ai Overclock Tuner -^> D.O.C.P.
-echo   3. Pick the 3200 profile
-echo   4. F10 Save and Exit
+echo  After reboot:
+echo    1. Del/F2 already handled - you land in UEFI
+echo    2. F7 Advanced Mode if needed
+echo    3. Ai Tweaker -^> Ai Overclock Tuner -^> D.O.C.P.
+echo    4. Select 3200 profile
+echo    5. F10 Save and Exit
 echo.
-echo Rebooting to UEFI in 30 seconds...
-echo Run "shutdown /a" in Admin CMD to cancel.
+echo  Rebooting in 90 seconds. Cancel with: shutdown /a
 echo.
-shutdown.exe /r /fw /t 30 /c "benchPC: enable D.O.C.P (XMP) for 3200 RAM, then F10 save"
-pause
+shutdown.exe /r /fw /t 90 /c "benchPC: enable D.O.C.P 3200 for Corsair RAM, then F10"
+echo Scheduled. This window can close.
+timeout /t 5

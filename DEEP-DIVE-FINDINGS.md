@@ -21,20 +21,29 @@ Generated: 2026-07-16
 ### 4. YellowStar.exe in Common Startup
 - Path was: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\YellowStar.exe`
 - Related to `OneDrive\Desktop\octane crackie\...` (cracked software)
-- **Action:** Remove from Startup (stability/security). Keep files if you want; do not auto-start.
+- **Action:** Removed from Startup (2026-07-16).
 
-### 5. BIOS age
+### 5. Priority backup from F: (done)
+- Copied to `C:\benchPC-Backup-From-F\`: Documents (5.1GB), 3DPRINTERFILES, Library, Backup
+- Full F: (~1.1TB used) still needs another disk if you want everything safe
+
+### 6. Continue hardening (done)
+- TRIM on C:, Wi-Fi power saving max performance, indexing off on F:
+- Removed CCleaner Smart Cleaning + Razer Cortex from Run
+- Component store CheckHealth clean
+
+### 7. BIOS age
 - PRIME Z390-A BIOS **1502** (2020-02-20) — optional update from ASUS if instability continues after DOCP
 
-### 6. Event 41 / unexpected shutdowns
+### 8. Event 41 / unexpected shutdowns
 - 22 events in 90 days; Fast Startup now **disabled**
 - Cluster timestamps often look like log flush after boot rather than fresh crashes
 
-### 7. Other
+### 9. Other
 - Wi-Fi Netwtw10 6062 "Lso was triggered" (Intel AX200) — usually non-fatal power-save
 - Ethernet disconnected (cable/link)
 - ESP SYSTEM volume Z: Health=Warning (common); NVMe C: Healthy
-- Component store reported **repairable** during deep repair → ScanHealth/RestoreHealth in progress
+- Component store repaired; final CheckHealth clean
 
 ## Already completed earlier
 - DISM RestoreHealth + SFC (repaired corrupt files) + component cleanup
@@ -45,4 +54,6 @@ Generated: 2026-07-16
 - `Run-DeepDive.ps1` — full deep report
 - `Fix-DeepRepair.ps1` — ScanHealth/SFC/power/dumps
 - `Fix-Targeted.ps1` — YellowStar removal + volume scans + chkdsk F:/C:
+- `Fix-ContinueHardening.ps1` — TRIM / Wi-Fi / startup hardening
+- `Backup-PriorityFromF.ps1` — selective F: -> C:\benchPC-Backup-From-F
 - `Open-UEFI-For-DOCP.bat` — reboot into BIOS for RAM profile
