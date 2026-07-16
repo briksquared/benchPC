@@ -26,6 +26,15 @@ Full automated repair (admin / UAC):
 
 Reports land in `reports\`. BIOS/RAM (DOCP) steps that need a reboot are in `MANUAL-BIOS-FIXES.md`.
 
+## Continue fixing
+
+```powershell
+# Elevated stability pass (Fast Startup off, power tweaks, CheckHealth)
+.\Fix-WindowsStability.ps1
+
+# When ready to set RAM to 3200: double-click Open-UEFI-For-DOCP.bat
+```
+
 ## Scripts
 
 | Script | Purpose |
