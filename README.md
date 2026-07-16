@@ -18,7 +18,13 @@ Repair (safe defaults first):
 .\Run-Repair.ps1
 ```
 
-Reports land in `reports\`.
+Full automated repair (admin / UAC):
+
+```powershell
+.\Fix-Everything.ps1
+```
+
+Reports land in `reports\`. BIOS/RAM (DOCP) steps that need a reboot are in `MANUAL-BIOS-FIXES.md`.
 
 ## Scripts
 
