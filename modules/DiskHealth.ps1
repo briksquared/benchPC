@@ -23,7 +23,7 @@ function Invoke-DiskDiagnostics {
   foreach ($v in (Get-Volume | Where-Object { $_.DriveLetter -and $_.DriveType -eq 'Fixed' })) {
     $pct = if ($v.Size -gt 0) { 100.0 * $v.SizeRemaining / $v.Size } else { 100 }
     if ($pct -lt 10) {
-      Write-Warn "Low free space on $($v.DriveLetter): — $([math]::Round($pct,1))% free"
+      Write-Warn "Low free space on $($v.DriveLetter): - $([math]::Round($pct,1))% free"
     } elseif ($v.HealthStatus -and $v.HealthStatus -ne 'Healthy') {
       Write-Warn "Volume $($v.DriveLetter): health = $($v.HealthStatus)"
     } else {

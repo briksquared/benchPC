@@ -9,7 +9,7 @@ function Invoke-PerformanceDiagnostics {
 
   $cpu = Get-CimInstance Win32_Processor
   foreach ($c in $cpu) {
-    Write-Host ("CPU load: {0}% — {1}" -f $c.LoadPercentage, $c.Name)
+    Write-Host ("CPU load: {0}% - {1}" -f $c.LoadPercentage, $c.Name)
   }
 
   Get-CimInstance Win32_OperatingSystem | ForEach-Object {

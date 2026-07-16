@@ -58,7 +58,7 @@ function Invoke-Logged {
     & $ScriptBlock
     Write-Ok $Label
   } catch {
-    Write-Fail "$Label — $($_.Exception.Message)"
+    Write-Fail "$Label - $($_.Exception.Message)"
   }
 }
 

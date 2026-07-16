@@ -29,14 +29,14 @@ $transcribed = Start-TranscriptSafe -Path $ReportPath
 
 function Show-Menu {
   Write-Section "Repair menu"
-  Write-Host "  1) Safe pass     — temp cleanup + DISM CheckHealth + SFC"
-  Write-Host "  2) Full repair   — DISM RestoreHealth + SFC + cleanup"
-  Write-Host "  3) Network reset — winsock/IP/DNS (reboot after)"
-  Write-Host "  4) Cleanup only  — temps + recycle bin"
-  Write-Host "  5) WU reset      — Windows Update components"
+  Write-Host "  1) Safe pass     - temp cleanup + DISM CheckHealth + SFC"
+  Write-Host "  2) Full repair   - DISM RestoreHealth + SFC + cleanup"
+  Write-Host "  3) Network reset - winsock/IP/DNS (reboot after)"
+  Write-Host "  4) Cleanup only  - temps + recycle bin"
+  Write-Host "  5) WU reset      - Windows Update components"
   Write-Host "  6) DISM only"
   Write-Host "  7) SFC only"
-  Write-Host "  8) Memory test   — schedule + reboot prompt"
+  Write-Host "  8) Memory test   - schedule + reboot prompt"
   Write-Host "  9) Exit"
   return Read-Host "Select"
 }

@@ -28,7 +28,7 @@ if (-not $ReportPath) {
 Write-Host "benchPC full diagnostics" -ForegroundColor White
 Write-Host "Report: $ReportPath"
 if (-not (Test-IsAdmin)) {
-  Write-Warn "Not running as Administrator — some checks will be limited."
+  Write-Warn "Not running as Administrator - some checks will be limited."
 }
 
 $transcribed = Start-TranscriptSafe -Path $ReportPath

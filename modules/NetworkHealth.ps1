@@ -25,7 +25,7 @@ function Invoke-NetworkDiagnostics {
       $r = Test-Connection -ComputerName $target -Count 2 -Quiet -ErrorAction Stop
       if ($r) { Write-Ok "Reachable: $target" } else { Write-Warn "Unreachable: $target" }
     } catch {
-      Write-Warn "Ping failed: $target — $($_.Exception.Message)"
+      Write-Warn "Ping failed: $target - $($_.Exception.Message)"
     }
   }
 
